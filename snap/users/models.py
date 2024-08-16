@@ -55,6 +55,7 @@ class BaseUser(BaseModel, AbstractBaseUser, PermissionsMixin):
 
 class Profile(models.Model):
     user = models.OneToOneField(BaseUser, on_delete=models.CASCADE)
+    isdeiver = models.BooleanField(default=False)
     ride_count = models.PositiveIntegerField(default=0)
     bio = models.CharField(max_length=1000, null=True, blank=True)
 
