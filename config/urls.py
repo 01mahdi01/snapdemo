@@ -14,5 +14,5 @@ urlpatterns = [
     path("redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     path('admin/', admin.site.urls),
     path('api/', include(('snap.api.urls', 'api'))),
-    path('users/', include(('snap.users.urls', 'users'))),
+    # path('users/', include(('snap.users.urls', 'users'))),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
